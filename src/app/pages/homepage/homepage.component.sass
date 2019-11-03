@@ -1,0 +1,41 @@
+.object-list
+  list-style-type: none
+  text-align: center
+  > li
+    cursor: pointer
+    padding: 15px 0
+    background-color: #a2ff89
+    border-bottom: 2px solid #ff9ea3
+
+.info-list
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  padding: 0
+  > li
+    display: flex
+    justify-content: space-between
+    border: 2px solid black
+    padding: 5px
+    width: 320px
+    .info-array
+      > span
+        display: block
+        &.info-link
+          color: #555
+          text-decoration: underline
+          cursor: pointer
+
+nav
+  display: flex
+  justify-content: center
+  max-width: 500px
+  width: 100%
+  margin: 0 auto
+  > div
+    background-color: #98d0ff
+    padding: 15px
+    margin: 5px
+    cursor: pointer
+    &.unactive
+      background-color: #7f817c

@@ -1,0 +1,18 @@
+<ul class="object-list">
+    <li *ngFor="let item of this.getInfoSrvc.listWithObjects.results" (click)="this.getInfoSrvc.getInfoAboutObject($event)" [attr.data-link]="item.url">{{item.name}}</li>
+</ul>
+
+<ul class="info-list">
+    <li *ngFor="let item of this.getInfoSrvc.infoAboutObject">
+        <span>{{item.name}}</span>
+        <span class="info-array">
+            <span *ngFor="let value of item.value" [class.info-link]="this.getInfoSrvc.checkIsUrl(value)" [attr.data-link]="this.getInfoSrvc.checkIsUrl(value) ? value : null" (click)="this.getInfoSrvc.getInfoAboutObject($event)">{{value}}</span>
+        </span>
+    </li>
+</ul>
+
+<nav>
+    <div [class.unactive]="!this.getInfoSrvc.listWithObjects.previous" [attr.data-link]='this.getInfoSrvc.listWithObjects.previous' (click)="this.getInfoSrvc.getListWithObjects($event)">prev</div>
+    <div [class.unactive]="!this.getInfoSrvc.listWithObjects.next" [attr.data-link]='this.getInfoSrvc.listWithObjects.next' (click)="this.getInfoSrvc.getListWithObjects($event)">next</div>
+</nav>
+

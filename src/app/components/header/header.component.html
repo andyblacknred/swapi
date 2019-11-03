@@ -1,0 +1,3 @@
+<ul>
+    <li *ngFor="let category of categories" (click)="this.getInfoSrvc.getListWithObjects($event)" [attr.data-link]="category.link">{{category.name}}</li>
+</ul>
