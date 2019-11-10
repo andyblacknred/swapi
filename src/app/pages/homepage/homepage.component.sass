@@ -1,3 +1,7 @@
+.searchbar
+  text-align: center
+
+
 .object-list
   list-style-type: none
   text-align: center
@@ -6,6 +10,18 @@
     padding: 15px 0
     background-color: #a2ff89
     border-bottom: 2px solid #ff9ea3
+
+p.sort-direction
+  text-align: center
+  border-bottom: 2px solid #98d0ff
+  cursor: pointer
+  padding: 15px 0
+  &.reverse
+    .arrow
+      transform: rotate(0deg)
+  .arrow
+    display: inline-block
+    transform: rotate(180deg)
 
 .info-list
   display: flex
