@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "swapi-db6d1": {
+      "hosting": {
+        "swapi": [
+          "swapi-db6d1"
+        ]
+      }
+    }
+  }
+}
