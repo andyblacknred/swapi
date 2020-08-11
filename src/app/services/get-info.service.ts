@@ -16,7 +16,7 @@ export class GetInfoService {
 
   getNavList = () => {
     let categories: Array<{name: string, link: string}> = [];
-    this.http.get('https://swapi.co/api/').subscribe((res) => {
+    this.http.get('https://swapi.dev/api/').subscribe((res) => {
       for (var prop in res) {
         categories.push({name: prop, link: res[prop]})
       }
